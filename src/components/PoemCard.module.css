@@ -1,0 +1,73 @@
+.card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2rem 2.2rem;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold-dim);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: var(--bg-raised);
+  transform: translateY(-2px);
+}
+
+.card:hover::before {
+  transform: scaleY(1);
+}
+
+.date {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #d4cfc6;
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+
+.excerpt {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+
+.read {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dim);
+  transition: color 0.2s;
+}
+
+.card:hover .read {
+  color: var(--gold);
+}
