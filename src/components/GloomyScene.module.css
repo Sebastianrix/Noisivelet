@@ -1,0 +1,42 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  /* bleed full width regardless of any parent padding */
+  margin-left: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 32vw, 420px);
+}
+
+/* Clouds oscillate back and forth — no need to loop off-screen */
+.cloudBack {
+  animation: driftA 160s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.cloudMid {
+  animation: driftB 100s ease-in-out infinite alternate-reverse;
+  will-change: transform;
+}
+.cloudFront {
+  animation: driftC 72s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes driftA {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-95px); }
+}
+@keyframes driftB {
+  from { transform: translateX(0); }
+  to   { transform: translateX(75px); }
+}
+@keyframes driftC {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-58px); }
+}
