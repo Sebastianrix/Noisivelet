@@ -1,0 +1,121 @@
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  color: #d8d2c8;
+  margin-bottom: 0.8rem;
+  line-height: 1.15;
+}
+
+.sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--dim);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0 3rem;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 2rem 2.2rem;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+}
+
+.card:hover {
+  border-left-color: var(--gold);
+  background: var(--bg-raised);
+  transform: translateX(4px);
+}
+
+.meta {
+  margin-bottom: 0.6rem;
+}
+
+.count {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #d4cfc6;
+  margin-bottom: 0.7rem;
+  line-height: 1.2;
+}
+
+.desc {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+.poemList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.poemList li {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.poemList li::before {
+  content: '— ';
+  color: var(--accent);
+}
+
+.enter {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dim);
+  transition: color 0.2s;
+}
+
+.card:hover .enter {
+  color: var(--gold);
+}

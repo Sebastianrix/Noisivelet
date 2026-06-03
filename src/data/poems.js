@@ -2,6 +2,7 @@ export const poems = [
   {
     id: 1,
     title: "The Last Candle",
+    collection: "vigil",
     date: "October 2024",
     excerpt: "A single flame consumes itself / to hold the dark at bay...",
     body: `A single flame consumes itself
@@ -22,6 +23,7 @@ can never be retold.`,
   {
     id: 2,
     title: "Hollow Root",
+    collection: "decay",
     date: "November 2024",
     excerpt: "Below the frost-cracked earth / something remembers spring...",
     body: `Below the frost-cracked earth
@@ -42,6 +44,7 @@ for more than just the rain.`,
   {
     id: 3,
     title: "Salt Margin",
+    collection: "decay",
     date: "December 2024",
     excerpt: "Where the tide forgets to leave / a grey residue remains...",
     body: `Where the tide forgets to leave
@@ -62,6 +65,7 @@ The residue of tears.`,
   {
     id: 4,
     title: "November Portrait",
+    collection: "self",
     date: "January 2025",
     excerpt: "Paint me in the colours / of the season I became...",
     body: `Paint me in the colours
@@ -82,6 +86,7 @@ and I think you know that too.`,
   {
     id: 5,
     title: "The House Remembers",
+    collection: "decay",
     date: "February 2025",
     excerpt: "Old walls hold the shape of voices / long after mouths have gone...",
     body: `Old walls hold the shape of voices
@@ -102,6 +107,7 @@ and it will miss you too.`,
   {
     id: 6,
     title: "Vigil",
+    collection: "vigil",
     date: "March 2025",
     excerpt: "I keep the hours no one wants / the 3 a.m. and 4...",
     body: `I keep the hours no one wants,
@@ -123,5 +129,26 @@ But first I keep the vigil,
 the watch that has no name,
 the burning that is not quite hope
 and is not quite the same.`,
+  },
+]
+
+export const collections = [
+  {
+    id: 'vigil',
+    title: 'Vigil Studies',
+    description: 'Poems written in the sleepless hours between midnight and dawn, when the city goes quiet and honesty becomes unavoidable.',
+    poemIds: [1, 6],
+  },
+  {
+    id: 'decay',
+    title: 'Things That Remain',
+    description: 'On what endures after loss — roots below frozen ground, houses that outlive their inhabitants, tidal margins that collect what the sea refuses to keep.',
+    poemIds: [2, 3, 5],
+  },
+  {
+    id: 'self',
+    title: 'November Self-Portraits',
+    description: 'The self as season, as weather, as light failing early. Attempts to be accurately described rather than flattered.',
+    poemIds: [4],
   },
 ]

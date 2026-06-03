@@ -1,6 +1,18 @@
 import { Link, useLocation } from 'react-router-dom'
 import styles from './Header.module.css'
 
+const NAV = [
+  { to: '/',            label: 'Poems' },
+  { to: '/collections', label: 'Collections' },
+  { to: '/journal',     label: 'Journal' },
+  { to: '/about',       label: 'About' },
+]
+
+function isActive(pathname, to) {
+  if (to === '/') return pathname === '/'
+  return pathname.startsWith(to)
+}
+
 export default function Header() {
   const { pathname } = useLocation()
 
@@ -11,8 +23,15 @@ export default function Header() {
         <span className={styles.brandName}>Noisivelet</span>
       </Link>
       <nav className={styles.nav}>
-        <Link to="/" className={pathname === '/' ? styles.active : ''}>Poems</Link>
-        <Link to="/about" className={pathname === '/about' ? styles.active : ''}>About</Link>
+        {NAV.map(({ to, label }) => (
+          <Link
+            key={to}
+            to={to}
+            className={isActive(pathname, to) ? styles.active : ''}
+          >
+            {label}
+          </Link>
+        ))}
       </nav>
     </header>
   )
